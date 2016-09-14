@@ -1,13 +1,13 @@
 <?php
 /**
- * Genesis Sample.
+ * Dame Clave.
  *
- * This file adds the Customizer additions to the Genesis Sample Theme.
+ * This file adds the Customizer additions to the Dame Clave Theme.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Dame Clave
+ * @author  Mauricio Alvarez
  * @license GPL-2.0+
- * @link    http://www.studiopress.com/
+ * @link    http://designnify.com/
  */
 
 /**
@@ -20,7 +20,7 @@
  * @return string Hex color code for link color.
  */
 function genesis_sample_customizer_get_default_link_color() {
-	return '#c3251d';
+	return '#410993';
 }
 
 /**
@@ -33,7 +33,7 @@ function genesis_sample_customizer_get_default_link_color() {
  * @return string Hex color code for accent color.
  */
 function genesis_sample_customizer_get_default_accent_color() {
-	return '#c3251d';
+	return '#410993';
 }
 
 add_action( 'customize_register', 'genesis_sample_customizer_register' );
@@ -47,6 +47,29 @@ add_action( 'customize_register', 'genesis_sample_customizer_register' );
 function genesis_sample_customizer_register() {
 
 	global $wp_customize;
+	
+	$wp_customize->add_section( 'genesis-sample-image', array(
+		'title'          => __( 'Front Page Hero Image', 'genesis-sample' ),
+		'description'    => __( '<p>Use the default image or personalize your site by uploading your own image for the front page 1 widget background.</p><p>The default image is <strong>1600 x 1050 pixels</strong>.</p>', 'genesis-sample' ),
+		'priority'       => 75,
+	) );
+
+	$wp_customize->add_setting( 'genesis-sample-front-image', array(
+		'default'  => sprintf( '%s/images/hero-bg.jpg', get_stylesheet_directory_uri() ),
+		'type'     => 'option',
+	) );
+	 
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'front-background-image',
+			array(
+				'label'       => __( 'Front Image Upload', 'genesis-sample' ),
+				'section'     => 'genesis-sample-image',
+				'settings'    => 'genesis-sample-front-image',
+			)
+		)
+	);
 
 	$wp_customize->add_setting(
 		'genesis_sample_link_color',

@@ -61,9 +61,11 @@
 	- Comments
 - Pages
 	- Homepage
-		- Slider Top
-		- News middle
-		- Sponsors bottom
+		- Home Top
+		- Home Middle
+		- Home Bottom (Sponsors)
+	- Pages
+		- Contact Page
 - Sidebars
 - Footer Widgets
 - Site Footer
@@ -132,6 +134,7 @@ Defaults
 /* # Pages
 ---------------------------------------------------------------------------------------------------- */
 @import "partials/homepage";
+@import "partials/pages";
 
 
 /* # Sidebars

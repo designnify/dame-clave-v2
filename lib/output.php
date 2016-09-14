@@ -1,13 +1,13 @@
 <?php
 /**
- * Genesis Sample.
+ * Dame Clave.
  *
- * This file adds the required CSS to the front end to the Genesis Sample Theme.
+ * This file adds the required CSS to the front end to the Dame Clave Theme.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Dame Clave
+ * @author  Mauricio Alvarez
  * @license GPL-2.0+
- * @link    http://www.studiopress.com/
+ * @link    http://designnify.com/
  */
 
 add_action( 'wp_enqueue_scripts', 'genesis_sample_css' );

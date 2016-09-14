@@ -92,6 +92,7 @@
 .entry-title {
 	font-size: 36px;
 	font-size: 3.6rem;
+	text-transform: uppercase;
 }
 
 .entry-title a,
@@ -102,10 +103,11 @@
 
 .entry-title a:hover,
 .entry-title a:focus {
-	color: #c3251d;
+	color: $color-link;
 }
 
 .widget-title {
+	font-family: $main-font;
 	font-size: 18px;
 	font-size: 1.8rem;
 	margin-bottom: 20px;

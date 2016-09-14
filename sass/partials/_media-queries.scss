@@ -25,16 +25,6 @@
 		width: 300px;
 	}
 
-	.footer-widgets-1,
-	.footer-widgets-2,
-	.footer-widgets-3 {
-		width: 340px;
-	}
-
-	.footer-widgets-1 {
-		margin-right: 60px;
-	}
-
 }
 
 
@@ -51,8 +41,7 @@
 		width: 740px;
 	}
 
-	.content,
-	.site-header .widget-area {
+	.content {
 		width: 620px;
 	}
 
@@ -60,16 +49,6 @@
 	.sidebar-sidebar-content .content,
 	.content-sidebar-sidebar .content {
 		width: 400px;
-	}
-
-	.footer-widgets-1,
-	.footer-widgets-2,
-	.footer-widgets-3 {
-		width: 300px;
-	}
-
-	.footer-widgets-1 {
-		margin-right: 30px;
 	}
 
 }
@@ -84,9 +63,6 @@
 	.content,
 	.content-sidebar-sidebar .content,
 	.content-sidebar-sidebar .content-sidebar-wrap,
-	.footer-widgets-1,
-	.footer-widgets-2,
-	.footer-widgets-3,
 	.js .genesis-nav-menu .sub-menu a,
 	.js .genesis-nav-menu .sub-menu, 
 	.sidebar-content-sidebar .content,
@@ -204,7 +180,7 @@
 		float: none;
 		margin: 1px 0;
 		position: relative;
-		text-align: left;
+		text-align: center;
 	}
 
 	.js .genesis-nav-menu .menu-item:hover {
@@ -259,11 +235,6 @@
 		color: #c3251d;
 	}
 
-	.footer-widgets-1,
-	.footer-widgets-2 {
-		margin: 0 auto 40px;
-	}
-
 }
 
 @media only screen and (max-width: 860px) {
@@ -284,6 +255,10 @@
 	.wrap {
 		padding-left: 5%;
 		padding-right: 5%;
+	}
+	
+	.site-header .widget-area {
+		position: static;
 	}
 
 	.after-entry,
@@ -320,9 +295,26 @@
 	.three-sixths,
 	.two-fourths,
 	.two-sixths,
-	.two-thirds {
+	.two-thirds,
+	.news > .widget {
 		margin: 0;
 		width: 100%;
+	}
+	
+	.home-middle {
+		.flexible-widgets.widget-thirds .widget {
+			float: none;
+			width: 100%;
+		}
+		
+		.flexible-widgets .widget {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	
+	.news > .widget {
+		margin-bottom: 10px;
 	}
 
 }
